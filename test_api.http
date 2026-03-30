@@ -1,0 +1,28 @@
+### 1. Login Agent (obtenir token)
+POST http://localhost/collectepro/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "agent1@express.cm",
+  "mot_de_passe": "Agent1234"
+}
+
+###
+
+### 2. Dashboard Agent (remplacer TOKEN_ICI par le token reçu)
+GET http://localhost/collectepro/api/agent/dashboard
+Authorization: Bearer TOKEN_ICI
+
+###
+
+### 3. Clients de l'agent
+GET http://localhost/collectepro/api/agent/clients
+Authorization: Bearer TOKEN_ICI
+
+###
+
+### 4. Commissions de l'agent
+GET http://localhost/collectepro/api/agent/commissions
+Authorization: Bearer TOKEN_ICI
+
+###

@@ -1,0 +1,8 @@
+# Apache (XAMPP) : réécriture vers index.php pour URLs propres.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /collectepro/api/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L,QSA]
+</IfModule>
